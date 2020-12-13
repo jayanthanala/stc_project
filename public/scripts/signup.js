@@ -1,20 +1,28 @@
 var error = document.getElementById("errors")
 function validate() {
+  document.getElementById("errors").innerHTML = ""
   var result = "";
   result += validateUsername();
   result += validateEmail();
   result += validatePassword();
   if (result == "") return true;
   // alert("Validation Result:\n\n" + result);
-  error.innerHTML = result.split(".")
-  console.log("what");
+  var errors = result.split(".")
+  errors.forEach((err) => {
+    var list = document.createElement("ul");
+    var node = document.createElement("li");  
+    var textnode = document.createTextNode(err);                     
+    node.appendChild(textnode);
+    list.appendChild(node);                              
+    document.getElementById("errors").appendChild(list)
+  })
   return false;
 }
 
 function validateUsername() {
   var name = document.getElementsByName("username")[0].value;
   if (name.length < 8)
-    return "username should be at least 8 characters.";
+    return "Username should be at least 8 characters.";
   return "";
 }
 

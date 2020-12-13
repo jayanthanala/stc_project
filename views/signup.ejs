@@ -26,13 +26,19 @@
     
 <main class="form-signin">
   <form name="loginForm" action="/signup" method="post" onsubmit="return validate()">
+    <img class="mb-4" src="https://cdn.freelogovectors.net/wp-content/uploads/2019/07/vitlogo.jpg" alt="" width="100" height="87">
+    <h3 class="h3 mb-3 fw-normal">Sign Up</h3>
     <input type="text" placeholder="Username" name="username" class="form-control">
-    <input type="text" placeholder="Gender" class="form-control" required>
-    <input type="text" placeholder="email" name="email" class="form-control">
+    <input type="text" placeholder="Gender" list="gender" class="form-control" required>
+    <datalist id="gender">
+      <option value="Male">
+      <option value="Female">
+    </datalist>
+    <input type="text" placeholder="Email" name="email" class="form-control">
     <input type="password" placeholder="Password" name="password" class="form-control">
     <input type="password" placeholder="Confirm Password" name="rpassword" class="form-control">
-    <input type="submit">
-    <p class="mt-5 mb-3" id="errors" style="color:red"></p>
+    <input type="submit" class="mt-4 btn btn-lg btn-primary"/>
+    <p class="mt-5 mb-3" id="errors" style="color:red;text-align: left;"></p>
   </form>
   <script src="/scripts/signup.js"></script>
 </main> 
