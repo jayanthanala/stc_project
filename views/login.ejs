@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+    </head>
+    <body>
+        <form name="loginForm" action="" onsubmit="return validate()">
+            <input type="text" placeholder="Username" name="username">
+            <!-- <input type="text" placeholder="Gender" required> -->
+            <input type="text" placeholder="email" name="email" >
+            <input type="password" placeholder="Password" name="password" >
+            <input type="password" placeholder="Confirm Password" name="rpassword" >
+            <input type="submit">
+            <div id ="errors"></div>
+        </form>
+        <script src="login.js"></script>
+    </body>
+</html>
