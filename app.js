@@ -21,7 +21,7 @@ mongoose.connect(process.env.DBURL,{
 mongoose.set("useCreateIndex", true);
 
 //GETS
-app.get('/home',authenticated,async (req,res) => {
+app.get('/',authenticated,async (req,res) => {
   res.render('course')
 })
 
@@ -42,7 +42,7 @@ app.post("/login", async(req, res) => {
     console.log(hashedPass);
     if(hashedPass){
       loginSuccess = true
-      res.redirect('/home')
+      res.redirect('/')
     }else{
       res.redirect('/login')
     }
@@ -62,7 +62,7 @@ app.post("/signup", async (req, res) => {
     })
     console.log('here');
     loginSuccess = true
-    res.redirect("/home");
+    res.redirect("/");
   }catch(err){
     console.log(err);
     res.redirect('back')
