@@ -31,3 +31,8 @@ function reset(){
 function changeTotal(){
   $('#total').html(creditsTaken)
 }
+
+function exit(){
+  alert(`You opted ${creditsTaken}! Bye`)
+  reset()
+}

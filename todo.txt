@@ -1,0 +1,4 @@
+1.add sessions
+2.store the course data on the db
+3.add limit to course selection
+5.add jwt for auth

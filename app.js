@@ -21,16 +21,21 @@ mongoose.connect(process.env.DBURL,{
 mongoose.set("useCreateIndex", true);
 
 //GETS
-app.get('/',authenticated,async (req,res) => {
+app.get('/home',authenticated, (req,res) => {
   res.render('course')
 })
 
-app.get('/signup',async (req,res) => {
+app.get('/signup',(req,res) => {
   res.render('signup')
 })
 
-app.get('/login',async (req,res) => {
+app.get('/', (req,res) => {
   res.render('login')
+})
+
+app.get('/exit',(req,res) => {
+  loginSuccess = false;
+  res.redirect('/')
 })
 
 //POSTS
@@ -42,9 +47,9 @@ app.post("/login", async(req, res) => {
     console.log(hashedPass);
     if(hashedPass){
       loginSuccess = true
-      res.redirect('/')
+      res.redirect('/home')
     }else{
-      res.redirect('/login')
+      res.redirect('/')
     }
   }catch(err){
     console.log(err);
@@ -62,7 +67,7 @@ app.post("/signup", async (req, res) => {
     })
     console.log('here');
     loginSuccess = true
-    res.redirect("/");
+    res.redirect("/home");
   }catch(err){
     console.log(err);
     res.redirect('back')
@@ -77,6 +82,6 @@ function authenticated(req, res, next) {
   if (loginSuccess) {
     next();
   } else {
-    res.redirect('/login');
+    res.redirect('/');
   }
 }
