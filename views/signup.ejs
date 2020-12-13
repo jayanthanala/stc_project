@@ -25,11 +25,16 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form name="loginForm" action="/login" method="post">
+  <form name="loginForm" action="/signup" method="post" onsubmit="return validate()">
     <input type="text" placeholder="Username" name="username" class="form-control">
+    <input type="text" placeholder="Gender" class="form-control" required>
+    <input type="text" placeholder="email" name="email" class="form-control">
     <input type="password" placeholder="Password" name="password" class="form-control">
+    <input type="password" placeholder="Confirm Password" name="rpassword" class="form-control">
     <input type="submit">
+    <p class="mt-5 mb-3" id="errors" style="color:red"></p>
   </form>
+  <script src="/scripts/signup.js"></script>
 </main> 
   </body>
 </html>

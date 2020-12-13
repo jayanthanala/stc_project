@@ -1,49 +1,140 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Registartion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="/css/home.css" rel="stylesheet">
+  </head>
+  <body>
 
-<body>
-  <div class="">
-    <h2>PC</h2>
-    <input class="checks" type="checkbox" name="E33" value="4" />4
-    <input class="checks" type="checkbox" name="E34" value="5" />5
-    <input class="checks" type="checkbox" name="E36" value="6" />6
+<main class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Registartion</h1>
+    <p class="lead">Credits Chosen:<b><span id="total" style="color:green">0</span></b></p>
+    <div class="error" style="color:red"></div>
   </div>
 
-  <div class="">
-    <h2>UC</h2>
-    <input class="checks" type="checkbox" name="E33" value="4" />4
-    <input class="checks" type="checkbox" name="E34" value="5" />5
-    <input class="checks" type="checkbox" name="E36" value="6" />6
+  <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">Program Core</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+      
+        <input class="checks form-check-input" type="checkbox" name="E33" value="4" id="pc1"/>
+        <label class="form-check-label" for="pc1">DSA - 4</label><br>
+        <input class="checks form-check-input" type="checkbox" name="E34" value="4" id="pc2"/>
+        <label class="form-check-label" for="pc2">TOC - 4</label><br>
+        <input class="checks form-check-input" type="checkbox" name="E36" value="3" id="pc3"/>
+        <label class="form-check-label" for="pc3">CAO - 3</label><br>
+        <input class="checks form-check-input" type="checkbox" name="E33" value="4" id="pc1"/>
+        <label class="form-check-label" for="pc1">JAVA - 4</label><br>
+    
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">University Core</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+      
+        <input class="checks form-check-input" type="checkbox" name="E33" value="4" id="uc1"/>
+        <label class="form-check-label" for="uc1">Calculus - 4</label><br>
+
+    
+        <input class="checks form-check-input" type="checkbox" name="E34" value="4" id="uc2"/>
+        <label class="form-check-label" for="uc2">Statistics - 4</label><br>
+  
+      
+        <input class="checks form-check-input" type="checkbox" name="E36" value="3" id="uc3"/>
+        <label class="form-check-label" for="uc3">Engg Chem - 3</label><br>
+
+        <input class="checks form-check-input" type="checkbox" name="E36" value="3" id="uc4"/>
+        <label class="form-check-label" for="uc4">Problem Solving - 3</labe
+    
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">Program Elective</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+      
+        <input class="checks form-check-input" type="checkbox" name="E33" value="4" id="pe1"/>
+        <label class="form-check-label" for="pe1">SIN - 4</label><br>
+
+        <input class="checks form-check-input" type="checkbox" name="E36" value="3" id="pe3"/>
+        <label class="form-check-label" for="pe3">IOT - 3</label><br>
+
+        <input class="checks form-check-input" type="checkbox" name="E34" value="4" id="pe2"/>
+        <label class="form-check-label" for="pe2">Web Mining - 4</label><br>
+        <input class="checks form-check-input" type="checkbox" name="E36" value="3" id="pe4"/>
+        <label class="form-check-label" for="pe4">Data Visualisation - 3</label>
+    
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">University Elective</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+        <input class="checks form-check-input ue" type="checkbox" name="E34" value="4" id="uc2"/>
+        <label class="form-check-label" for="uc2">Fertilizer Tech - 4</label><br>
+        <input class="checks form-check-input ue" type="checkbox" name="E33" value="4" id="uc1"/>
+        <label class="form-check-label" for="uc1">Programming in C - 4</label><br>
+        <input class="checks form-check-input ue" type="checkbox" name="E36" value="3" id="uc3"/>
+        <label class="form-check-label" for="uc3">Petroleum Tech - 3</label><br>
+        <input class="checks form-check-input ue" type="checkbox" name="E36" value="3" id="uc3"/>
+        <label class="form-check-label" for="uc3">Fundamentals of Crypto - 3</label>
+        </ul>
+      </div>
+    </div>
+    </div>
+    
   </div>
+  <button type="button" class=" btn btn-lg btn-primary" name="button" onclick="reset()">Reset</button>
+  
 
-  <div class="">
-    <h2>PE</h2>
-    <input class="checks" type="checkbox" name="E33" value="4" />4
-    <input class="checks" type="checkbox" name="E34" value="5" />5
-    <input class="checks" type="checkbox" name="E36" value="6" />6
-  </div>
-
-  <div class="">
-    <h2>UE</h2>
-    <input class="checks ue" type="checkbox" name="E33" value="4" />4
-    <input class="checks ue" type="checkbox" name="E34" value="5" />5
-    <input class="checks ue" type="checkbox" name="E36" value="6" />6
-  </div>
-
-  <button type="button" name="button" onclick="reset()">Reset</button>
+</main>
 
 
-  <p>Total Credits:<span id="total"></span></p>
-  <div class="error" style="color:red">
-
-  </div>
-  <script src="course.js"></script>
-</body>
-
+  <script src="/scripts/course.js" type="text/javascript"></script>
+  </body>
 </html>
+
+
+
+
+ 

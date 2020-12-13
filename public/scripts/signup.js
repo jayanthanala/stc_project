@@ -1,5 +1,4 @@
 var error = document.getElementById("errors")
-
 function validate() {
   var result = "";
   result += validateUsername();
@@ -8,6 +7,7 @@ function validate() {
   if (result == "") return true;
   // alert("Validation Result:\n\n" + result);
   error.innerHTML = result.split(".")
+  console.log("what");
   return false;
 }
 

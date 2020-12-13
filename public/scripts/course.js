@@ -7,15 +7,15 @@ $('input.ue').on('change', function(u) {
    if($(this).siblings(':checked').length >= limit) {
      this.checked = false;
      $('div.error').html("You can only choose 1 UE course.")
-     creditsTaken += parseInt(u.target.value, 10)
+     if(creditsTaken < 27) creditsTaken += parseInt(u.target.value, 10)
    }
 });
 
 $('input.checks').on('change',e => {
   if (e.target.checked) {
-     $('div.error').html(" ")
+    $('div.error').html(" ")
     creditsTaken += parseInt(e.target.value, 10)
-  } else {
+  }else{
     creditsTaken -= parseInt(e.target.value, 10)
   }
   changeTotal()
@@ -24,6 +24,7 @@ $('input.checks').on('change',e => {
 function reset(){
   $('input.checks').prop('checked', false)
   creditsTaken = 0
+  $('div.error').html(" ")
   changeTotal()
 }
 
