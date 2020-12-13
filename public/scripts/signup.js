@@ -8,11 +8,13 @@ function validate() {
   if (result == "") return true;
   // alert("Validation Result:\n\n" + result);
   var errors = result.split(".")
+  errors.pop();
   errors.forEach((err) => {
     var list = document.createElement("ul");
     var node = document.createElement("li");  
-    var textnode = document.createTextNode(err);                     
-    node.appendChild(textnode);
+    var text = document.createTextNode(err);
+                    
+    node.appendChild(text);
     list.appendChild(node);                              
     document.getElementById("errors").appendChild(list)
   })
