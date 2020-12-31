@@ -38,7 +38,7 @@ app.get('/exit',(req,res) => {
   res.redirect('/')
 })
 
-//POSTS
+//POST
 
 app.post("/login", async(req, res) => {
   try{
